@@ -1,0 +1,19 @@
+{
+    "name" : "Binge Watch",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts": [
+        { 
+            "js": [
+                "util/jquery.min.js",
+                "util/util.js"
+            ], 
+            "matches": [ "http://*/*", "https://*/*"] 
+        },
+        {
+            "matches": ["*://www.netflix.com/watch/*"],
+            "js": ["netflix/playback/playback.js"],
+            "css": [ "netflix/playback/playback.css"]
+        }
+    ]
+}
